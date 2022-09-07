@@ -1,18 +1,14 @@
 
 .gradient-bg-welcome {
-    background-color:#7c971a;
+    background-color:#6d7551;
     background-image: 
       radial-gradient(at 0% 0%, rgb(33, 73, 42) 0, transparent 50%), 
       radial-gradient(at 50% 0%, rgb(134, 206, 100) 0, transparent 50%), 
       radial-gradient(at 100% 0%, rgb(150, 138, 29) 0, transparent 50%);
+      
   }
 
-  .gradient-bg-services {
-    background-color:#2e4e14;
-    background-image: 
-      radial-gradient(at 0% 0%, rgb(66, 54, 124) 0, transparent 50%), 
-      radial-gradient(at 50% 100%, rgb(58, 90, 16) 0, transparent 50%);
-  }
+
 
 /* .min-h-screen {
     background-color:#949464;

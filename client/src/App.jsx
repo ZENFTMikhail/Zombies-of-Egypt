@@ -9,19 +9,14 @@ const App = () => (
   <div className="min-h-screen">
     <div className="gradient-bg-welcome">
      <Navbar/>
-     <Welcome />
+    <Welcome className="bg-welcome" />
     </div>
-  <Services />
-
-  <Transactions /> 
-  
-
-  <Footer />
- 
-
 
    
+  
   </div>
 );
+
+
 
 export default App;
