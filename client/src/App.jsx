@@ -12,7 +12,9 @@ const App = () => (
     <Welcome className="bg-welcome" />
     </div>
 
-   
+   <Services />
+   <Transactions />
+   <Footer />
   
   </div>
 );

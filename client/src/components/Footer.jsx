@@ -1,7 +1,7 @@
 // @ts-check
 const Footer = () => {
     return (
-        <p>Footer</p>
+        <h1>Footer</h1>
     );
 }
 
