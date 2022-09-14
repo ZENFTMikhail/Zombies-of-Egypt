@@ -52,7 +52,13 @@ return (
          </div>
          <p className="text-white">Choose the number of coins to exchange:</p>
          <div className="grid sm:grid-cols-1 bg-[#4d7741] text-center hover:bg-[#435a3d] grid-cols-1 w-full mt-5">
-          
+           
+          <div className="select">
+            <div className="select__input"></div>
+            <div className="select__dropdown"></div>
+           
+
+          </div>
             <div className={`sm:rounded-tr-1x1 ${companyCommonStyles}`}>
              
             </div>
