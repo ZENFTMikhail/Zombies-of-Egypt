@@ -1,21 +1,56 @@
+* html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+
 
 .gradient-bg-welcome {
-    background-color:#6d7551;
-    background-image: 
-      radial-gradient(at 0% 0%, rgb(33, 73, 42) 0, transparent 50%), 
-      radial-gradient(at 50% 0%, rgb(134, 206, 100) 0, transparent 50%), 
-      radial-gradient(at 100% 0%, rgb(150, 138, 29) 0, transparent 50%);
-      
-  }
+  height: 100vh;
+  background-color: #7f913e;
+  background-image: radial-gradient(at 0% 0%, rgb(33, 73, 42) 0, transparent 50%),
+    radial-gradient(at 50% 0%, rgb(134, 206, 100) 0, transparent 50%),
+    radial-gradient(at 70% 0%, rgb(67, 107, 48) 0, transparent 70%)
+}
 
 
 
-/* .min-h-screen {
-    background-color:#949464;
- background-image: 
- radial-gradient(at 0% 0%, rgb(121, 115, 151) 0, transparent 50%)
 
-} */
+
+.min-h-screen {
+  background-color: #0a0a03;
+  background-image:
+    radial-gradient(at 0% 0%, rgb(121, 115, 151) 0, transparent 50%)
+}
+
+.gradient-bg-services {
+  height: 20vh;
+  background-color: #000000;
+  background-image:
+    radial-gradient(at 0% 0%, rgb(0, 0, 0) 0, transparent 50%),
+    radial-gradient(at 50% 0%, rgb(0, 0, 0) 0, transparent 50%),
+    radial-gradient(at 100% 0%, rgb(0, 0, 0) 0, transparent 50%);
+
+
+}
+
+.gradient-bg-transactions {
+
+
+  height: 70vh;
+  background-color: #000000;
+  background-image:
+    radial-gradient(at 0% 0%, rgb(0, 0, 0) 0, transparent 50%),
+    radial-gradient(at 50% 0%, rgb(0, 0, 0) 0, transparent 50%),
+    radial-gradient(at 100% 0%, rgb(0, 0, 0) 0, transparent 50%);
+
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -6,13 +6,16 @@ import { BsInfoCircle } from "react-icons/bs";
 import { TransactionContext } from "../context/TransactionContext";
 
 const companyCommonStyles = "min-h-[50px] sm:px-1 px-6 sm:min-w-[100px] flex justify-center items-center border-[10px] border-green-20 text-sm font-light text-black";
-const companyChangeStyles = "min-h-[100px] sm:px-2 px-1 sm:min-w-[300px] flex justify-center items-center border-[50px] border-green-20 text-sm font-light text-black";
+
 
 const Input = ({ placeholder, name, type, value, handleChange }) => (
+
+
   <input
+
     placeholder={placeholder}
     type={type}
-    step="0.0001"
+    step="1"
     value={value}
     onChange={(e) => handleChange(e, name)}
     className="my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-glassmorphism"
@@ -21,17 +24,24 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
 
 
 const Welcome = () => {
-  const { connectWallet, connectedAccount } = useContext(TransactionContext);
-  console.log({ connectedAccount });
-  console.log({ TransactionContext });
+  const { connectedAccount, connectWallet, handleChange, sendTransaction, formData, isLoading } = useContext(TransactionContext);
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    const { addressTo, amount, keyword, message } = formData;
 
-  }
+
+
+    e.preventDefault();
+
+    if (!addressTo || !amount || !keyword || !message) return;
+
+    sendTransaction();
+  };
+
   return (
 
 
-    <div className="flex w-full justify-center items-center ">
+    <div className=" flex w-1/2 justify-center items-center  ">
       <div className="flex mf:flex-row flex-col items-start justify-between md:p-20 py-12 px-4 ">
 
         <div className="flex flex-1 justify-start items-start flex-col mf:mr-10">
@@ -59,23 +69,41 @@ const Welcome = () => {
 
 
         </div>
+
+
         <p className="text-white">Choose the number of coins to exchange:</p>
-        <div className="grid sm:grid-cols-1 bg-[#4d7741] text-center hover:bg-[#435a3d] grid-cols-1 w-full mt-5">
+        <div className="p-2 sm:w-50 w-50% flex flex-col justify-start items-center blue-glassmorphism">
 
-          <div className="select">
-            <div className="select__input"></div>
-            <div className="select__dropdown"></div>
-
-
-          </div>
-          <div className={`sm:rounded-tr-1x1 ${companyCommonStyles}`}>
-
-          </div>
+          <Input placeholder="Amount (ZENFT)" name="amount" type="number" handleChange={handleChange}
+          />
 
 
+          <div className="h-[3px] w-full bg-[#6aa559] my-2" />
 
+          {isLoading
+            ? <Loader />
+            : (
+              <button
+                type="button"
+                onClick={handleSubmit}
+                className="text-white w-full mt-2 font-semibold p-2 bg-[#6aa559] hover:bg-[#559743] rounded-full cursor-pointer"
+              >
+                Get
+              </button>
+            )}
         </div>
+
+
+
+
+
+
+
+
+
+
       </div>
+
 
 
 
